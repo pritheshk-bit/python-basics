@@ -1,0 +1,27 @@
+def greet():
+    print("Welcome to the Art Supplies Store!")
+
+def calculate_total(price, quantity):
+    return price * quantity
+
+def calculate_change(total, paid):
+    return paid - total
+
+greet()
+
+price = float(input("Enter item price: ₹"))
+quantity = int(input("Enter number of items: "))
+
+total = calculate_total(price, quantity)
+
+print("Total cost: ₹", total)
+
+paid = float(input("Enter amount paid: ₹"))
+
+change = calculate_change(total, paid)
+
+print("\n----- RECEIPT -----")
+print("Total: ₹", total)
+print("Paid: ₹", paid)
+print("Change: ₹", change)
+print("Thank you for shopping!")

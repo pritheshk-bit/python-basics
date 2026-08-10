@@ -1,0 +1,35 @@
+def calculate_change(paid, price):
+    return paid - price
+
+
+ticket_price = 50
+total = 0
+
+print("Parking Ticket Payment")
+print("Ticket price: ₹", ticket_price)
+
+while True:
+    coin = int(input("Enter coin (5, 10, 20, 50): ₹"))
+
+    if coin not in [5, 10, 20, 50]:
+        print("Invalid coin. Try again.")
+        continue
+
+    total = total + coin
+    print("Total paid: ₹", total)
+
+    if total >= ticket_price:
+        break
+
+change = calculate_change(total, ticket_price)
+
+print("\nPayment Summary")
+print("Ticket price: ₹", ticket_price)
+print("Amount paid: ₹", total)
+
+if change > 0:
+    print("Change: ₹", change)
+else:
+    pass
+
+print("Payment successful!")

@@ -1,0 +1,27 @@
+def calculate_bill(bill, tip):
+    """Calculates the total bill after adding a tip."""
+    total = bill + (bill * tip / 100)
+    return total
+
+
+def seating_arrangements(people):
+    """Calculates possible seating arrangements using recursion."""
+
+    # Base case
+    if people == 1:
+        return 1
+
+    # Recursive case
+    return people * seating_arrangements(people - 1)
+
+
+# Positional arguments
+total_bill = calculate_bill(2000, 10)
+
+print("Total bill:", total_bill)
+
+# Access the function docstring
+print(calculate_bill.__doc__)
+
+# Recursive function
+print("Possible seating arrangements:", seating_arrangements(4))
