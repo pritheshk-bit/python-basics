@@ -1,0 +1,28 @@
+while True:
+    try:
+        bill = float(input("Enter bill amount: ₹"))
+        discount = float(input("Enter discount percentage: "))
+        people = int(input("Enter number of people: "))
+
+        if bill < 0 or discount < 0 or people < 0:
+            print("Please enter positive numbers.")
+            continue
+
+        discount_amount = bill * discount / 100
+        final_bill = bill - discount_amount
+        each_person = final_bill / people
+
+    except ValueError:
+        print("Invalid input! Enter numbers only.")
+
+    except ZeroDivisionError:
+        print("Number of people cannot be zero.")
+
+    else:
+        print("\nDiscount Amount: ₹", round(discount_amount, 2))
+        print("Final Bill: ₹", round(final_bill, 2))
+        print("Each Person Pays: ₹", round(each_person, 2))
+        break
+
+    finally:
+        print("Calculation checked.")
