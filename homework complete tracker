@@ -1,0 +1,27 @@
+homework = ["Math", "Science", "English"]
+completed = 0
+i = 0
+
+while i < len(homework):
+    print("Task:", homework[i])
+
+    answer = input("Is it complete? (yes/no): ")
+
+    if answer.lower() == "yes":
+        completed += 1
+        i += 1
+    else:
+        print("Finish this task before moving on.")
+
+print("\nHomework completed:", completed)
+print("All homework is done!")
+
+
+# Infinite loop example
+while True:
+    choice = input("Type 'break' to stop: ")
+
+    if choice.lower() == "break":
+        break
+
+print("Loop stopped safely.")
