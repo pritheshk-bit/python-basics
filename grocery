@@ -1,0 +1,32 @@
+
+total_cost = 1200
+people = 4
+
+cost_per_person = total_cost / people
+print("Cost per person:", cost_per_person)
+
+items = 24
+
+if items % people == 0:
+    print("Items can be shared equally.")
+else:
+    print("Items cannot be shared equally.")
+
+week1 = 850
+week2 = 900
+week3 = 950
+week4_wrong = 1500
+
+week4_correct = 1000
+
+average = (week1 + week2 + week3 + week4_correct) / 4
+print("Corrected average:", average)
+
+store1 = 900
+store2 = 950
+store3 = 1000
+
+if average < store1 and average < store2 and average < store3:
+    print("Our average is cheaper than all three stores.")
+else:
+    print("Our average is not cheaper than all three stores.")

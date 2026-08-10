@@ -1,0 +1,24 @@
+print("Holiday Activity Planner")
+
+holiday = input("Choose a holiday (Beach/Mountain): ")
+
+if holiday.lower() == "beach":
+    activity = input("Choose an activity (Swimming/Relaxing): ")
+
+    if activity.lower() == "swimming":
+        print("You can go swimming in the sea!")
+    else:
+        print("You can relax on the beach!")
+
+elif holiday.lower() == "mountain":
+    activity = input("Choose an activity (Hiking/Camping): ")
+
+    if activity.lower() == "hiking":
+        print("You can go hiking in the mountains!")
+    else:
+        print("You can enjoy camping in the mountains!")
+
+else:
+    print("Invalid holiday choice.")
+
+print("Have a great holiday!")
