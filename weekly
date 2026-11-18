@@ -1,0 +1,41 @@
+
+habit = ("Reading", "Daily", 30, "Minutes")
+
+week = (True, True, False, True, True, False, True)
+
+print("Habit Details:", habit)
+print("Weekly Record:", week)
+
+print("Habit Name:", habit[0])
+print("Frequency:", habit[1])
+print("Duration:", habit[2])
+print("Unit:", habit[3])
+
+print("Total Days:", len(week))
+
+print("Monday:", week[0])
+print("Wednesday:", week[2])
+print("Sunday:", week[-1])
+
+print("First Three Days:", week[0:3])
+print("Last Four Days:", week[3:7])
+
+week = week + (True,)
+
+print("Updated Weekly Record:", week)
+print("Total Days:", len(week))
+
+completed = 0
+missed = 0
+
+for day in week:
+    if day == True:
+        completed += 1
+    else:
+        missed += 1
+
+print("Completed Days:", completed)
+print("Missed Days:", missed)
+print("Habit:", habit[0])
+print("Total Days Tracked:", len(week))
+print("Habit Tracker Completed!")
